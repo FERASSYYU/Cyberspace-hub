@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pbh.local/schemas/finding.schema.json",
+  "title": "PBH Finding",
+  "type": "object",
+  "required": ["program_id", "asset_ref", "artifact_ref", "category", "tool_severity", "pbh_severity",
+               "confidence", "tool_name", "tool_version", "detected_at", "validation_state",
+               "claim_level", "policy_state", "correlation_id", "redacted_evidence", "remediation"],
+  "properties": {
+    "validation_state": {"enum": ["unverified", "needs_human_review", "confirmed_in_lab",
+                                   "rejected_false_positive", "authorized_manual_confirmation"]},
+    "claim_level": {"enum": ["informational", "static_analysis_hypothesis", "needs_manual_review",
+                              "confirmed_in_lab", "not_a_live_target_finding"]},
+    "tool_severity": {"enum": ["info", "low", "medium", "high", "critical"]},
+    "pbh_severity": {"enum": ["info", "low", "medium", "high", "critical"]},
+    "line": {"type": ["integer", "null"], "minimum": 1}
+  },
+  "additionalProperties": false
+}

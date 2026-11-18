@@ -1,0 +1,8 @@
+{
+  "openapi": "3.0.3",
+  "info": {"title": "Lab API without security", "version": "0.0.1"},
+  "paths": {
+    "/items": {"get": {"responses": {"200": {"description": "ok"}}}},
+    "/items/{id}": {"delete": {"responses": {"204": {"description": "deleted"}}}}
+  }
+}

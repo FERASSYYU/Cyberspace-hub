@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pbh.local/schemas/program.schema.json",
+  "title": "PBH Program Profile",
+  "type": "object",
+  "required": ["program_id", "live_testing_enabled", "in_scope_hosts", "out_of_scope_hosts",
+               "rate_limit_rps", "required_header"],
+  "properties": {
+    "live_testing_enabled": {"type": "boolean", "const": false},
+    "rate_limit_rps": {"type": "integer", "minimum": 1, "maximum": 5},
+    "required_header": {"type": "string"}
+  }
+}

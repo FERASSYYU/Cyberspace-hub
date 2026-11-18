@@ -1,0 +1,13 @@
+{
+  "program_id": "atmail",
+  "live_testing_enabled": false,
+  "in_scope_hosts": ["*.atmail.com", "*.atmailcloud.com", "*.junara.com", "www.atmail.com"],
+  "out_of_scope_hosts": ["billing.atmail.com", "success.atmail.com", "status.atmail.com"],
+  "rate_limit_rps": 5,
+  "required_header": "X-Bug-Bounty",
+  "notes": [
+    "Reference only. PBH does not contact any Atmail host.",
+    "Policy source: https://www.atmail.com/bug-bounty-terms/ (read 2026-11-18).",
+    "Under-18 eligibility conflicts with the payment rules; see docs/atmail_eligibility.md."
+  ]
+}

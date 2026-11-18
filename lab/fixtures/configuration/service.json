@@ -1,0 +1,5 @@
+{
+  "service": "lab-synthetic",
+  "api_key": "NOTREAL-fixture-key-0000",
+  "cors": {"Access-Control-Allow-Origin": "*"}
+}

@@ -1,0 +1,18 @@
+[project]
+name = "project-bounty-hunter"
+version = "0.1.0"
+description = "Defensive, offline security-analysis tooling for authorized review (PBH)."
+requires-python = ">=3.13,<3.14"
+# No runtime dependencies in this phase: the core uses the standard library only.
+# Third-party tool integrations and a locked uv.lock are added once PyPI is reachable.
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["pbh*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

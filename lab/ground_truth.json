@@ -1,0 +1,13 @@
+{
+  "description": "Synthetic labels. Every expected category is a static-analysis hypothesis fixture, not an Atmail finding.",
+  "files": {
+    "json/clean.json": [],
+    "json/invalid_syntax.json": ["SYNTAX_ERROR"],
+    "json/duplicate_keys.json": ["SYNTAX_ERROR"],
+    "json/app.jsonc": ["debug_setting_enabled"],
+    "configuration/service.json": ["sensitive_value_in_config", "cors_wildcard_origin"],
+    "api/openapi_no_security.json": ["api_no_security_definition", "api_operation_without_security"],
+    "api/openapi_secured.json": [],
+    "configuration/package.json": []
+  }
+}
